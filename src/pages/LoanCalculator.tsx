@@ -99,6 +99,3 @@ export default function LoanCalculator() {
     </DashboardLayout>
   );
 }
-
-// Re-export TrendingUp at module level for the calc items
-import { TrendingUp } from "lucide-react";
