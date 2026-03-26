@@ -94,7 +94,7 @@ export default function ConnectWallet() {
           </div>
         )}
 
-        {(state === "idle" || state === "connecting") && state !== "signing" && (
+        {(state === "idle" || state === "connecting") && (
           <div className="space-y-3">
             {wallets.map((w) => (
               <button
