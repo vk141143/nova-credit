@@ -4,7 +4,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useState, useMemo } from "react";
-import { ArrowRight, Award, DollarSign, Percent, Calendar } from "lucide-react";
+import { ArrowRight, Award, DollarSign, Percent, Calendar, TrendingUp } from "lucide-react";
 
 export default function LoanCalculator() {
   const [amount, setAmount] = useState([5000]);
