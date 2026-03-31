@@ -39,7 +39,7 @@ export default function ConnectWallet() {
           </div>
           <h1 className="text-2xl font-bold text-gradient">Connect Wallet</h1>
           <p className="text-sm text-muted-foreground">
-            Connect your wallet to access the PolyLend platform
+            Connect your wallet to access the DefiLoan platform
           </p>
         </div>
 

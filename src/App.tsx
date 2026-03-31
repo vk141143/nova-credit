@@ -25,7 +25,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<ConnectWallet />} />
+          <Route path="/" element={<Index />} />
           <Route path="/connect" element={<ConnectWallet />} />
           <Route path="/kyc" element={<KYCOnboarding />} />
           <Route path="/dashboard" element={<BorrowerDashboard />} />
