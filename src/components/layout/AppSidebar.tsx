@@ -74,7 +74,7 @@ export function AppSidebar() {
           <Wallet className="h-4 w-4 text-primary" />
         </div>
         {!collapsed && (
-          <span className="font-bold text-lg text-gradient">PolyLend</span>
+          <span className="font-bold text-lg text-gradient">DefiLoan</span>
         )}
       </div>
       <SidebarContent className="px-2 py-4 space-y-2">
