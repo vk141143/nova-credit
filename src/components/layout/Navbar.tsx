@@ -1,5 +1,7 @@
 import { Bell, Wallet, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { MOCK_WALLET, MOCK_NOTIFICATIONS } from "@/lib/mock-data";
 import { useNavigate } from "react-router-dom";
