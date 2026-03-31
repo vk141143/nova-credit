@@ -6,12 +6,14 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 /* ── animation helpers ── */
+const easeOut = [0.22, 1, 0.36, 1] as const;
+
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.7, delay: i * 0.12, ease: easeOut as unknown as string },
   }),
 };
 
@@ -20,7 +22,7 @@ const scaleIn = {
   visible: (i: number) => ({
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.6, delay: i * 0.1, ease: easeOut as unknown as string },
   }),
 };
 
@@ -30,7 +32,7 @@ const textReveal = {
     opacity: 1,
     y: 0,
     filter: "blur(0px)",
-    transition: { duration: 0.9, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.9, delay: i * 0.15, ease: easeOut as unknown as string },
   }),
 };
 
