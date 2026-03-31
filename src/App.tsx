@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import Index from "./pages/Index";
 import ConnectWallet from "./pages/ConnectWallet";
 import KYCOnboarding from "./pages/KYCOnboarding";
@@ -20,28 +21,30 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/connect" element={<ConnectWallet />} />
-          <Route path="/kyc" element={<KYCOnboarding />} />
-          <Route path="/dashboard" element={<BorrowerDashboard />} />
-          <Route path="/calculator" element={<LoanCalculator />} />
-          <Route path="/emi-calendar" element={<EMICalendar />} />
-          <Route path="/rewards" element={<RewardsDashboard />} />
-          <Route path="/lender" element={<LenderDashboard />} />
-          <Route path="/loan/:id" element={<LoanDetails />} />
-          <Route path="/admin" element={<AdminPanel />} />
-          <Route path="/admin/users" element={<AdminPanel />} />
-          <Route path="/admin/metrics" element={<AdminPanel />} />
-          <Route path="/notifications" element={<Notifications />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
+    <ThemeProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/connect" element={<ConnectWallet />} />
+            <Route path="/kyc" element={<KYCOnboarding />} />
+            <Route path="/dashboard" element={<BorrowerDashboard />} />
+            <Route path="/calculator" element={<LoanCalculator />} />
+            <Route path="/emi-calendar" element={<EMICalendar />} />
+            <Route path="/rewards" element={<RewardsDashboard />} />
+            <Route path="/lender" element={<LenderDashboard />} />
+            <Route path="/loan/:id" element={<LoanDetails />} />
+            <Route path="/admin" element={<AdminPanel />} />
+            <Route path="/admin/users" element={<AdminPanel />} />
+            <Route path="/admin/metrics" element={<AdminPanel />} />
+            <Route path="/notifications" element={<Notifications />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </ThemeProvider>
   </QueryClientProvider>
 );
 
