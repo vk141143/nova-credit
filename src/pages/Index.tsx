@@ -38,7 +38,7 @@ const textReveal = {
 
 const lineReveal = {
   hidden: { scaleX: 0 },
-  visible: { scaleX: 1, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } },
+  visible: { scaleX: 1, transition: { duration: 0.8, ease: easeOut as unknown as string } },
 };
 
 function AnimatedSection({ children, className }: { children: React.ReactNode; className?: string }) {
